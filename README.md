@@ -1,6 +1,12 @@
 # Option
 An optional datatype written in C++ 98
 
+## Usage
+When creating a new Option object give a paremeter to the constructor if you want to represent something, or don't if you want to represent nothing.<br>
+Or use the methods `void wrap(T)` and `T unwrap()` later to change the Options state.<br>
+You can use the `*` operator to access a `bool` that indicates wether something is stored or not.<br>
+The Option object can be implicitly converted to the template type.<br>
+
 ## Example
 ```
 Option<int>	some(10);

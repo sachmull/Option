@@ -22,6 +22,19 @@ class Option
 			return some;
 		}
 
+		void	wrap(T some)
+		{
+			this->some = some;
+			is_some = true;
+		}
+
+		T		unwrap()
+		{
+			assert("Option is None" && is_some == true);
+			is_some = false;
+			return some;
+		}
+
 		Option(T some)
 		: some(some), is_some(true)
 		{}
